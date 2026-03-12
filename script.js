@@ -1,6 +1,3 @@
 function splitLines(text) {
-  const lines = text.split("\n");
-  return lines;
+  return text.split("\\n").filter(line => line !== "");
 }
-
-console.log(splitLines("A\nB\nC\n")); 
