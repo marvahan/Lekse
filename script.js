@@ -1,10 +1,14 @@
 function splitLines(text) {
   return text.split("\\n").filter(line => line !== "");
 }
+// Hjelpefunksjon for 1c
+function toNumbersFromList(stringArray) {
+  return stringArray.map(Number);
+}
 
 function pairSums() {
   const input = document.getElementById("input").value.split(",");
-  const tall = toNumbers(input)// Maren sin kode fra 1b
+  const tall = toNumbersFromList(input); 
   const output = document.getElementById("output");
   output.innerHTML = "";
 
@@ -15,12 +19,14 @@ function pairSums() {
   }
 }
 
+
 //Oppgave 1.b
 function toNumbers() {
   const input = document.getElementById("inputNumbers").value;
   const stringArray = input.split(",");
   const numbers = stringArray.map(Number);
   document.getElementById("resultat").textContent = "Oppfanget og brukbare nummer: " + numbers;
+  return numbers;
 }
 
 //Oppgave 2
